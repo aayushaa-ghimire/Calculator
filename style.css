@@ -1,0 +1,42 @@
+body{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.521);
+}
+#calcbody{
+    width: 17.5vw;
+    padding: 1vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+    background-color: white;
+    border-radius: 0.5vw;
+    margin-top: 10vw;
+    margin-bottom: 10vw;
+}
+#para{
+    display: flex;
+    justify-content: end;
+    color: white;
+}
+#topcalc{
+    background-color: rgb(110, 148, 181);
+    width: 17.5vw;
+    height: 6vw;
+    border-radius:inherit;
+}
+#bottomcalc{
+    display: grid;
+    gap: 0.5vw;
+    grid-template-columns: repeat(4, minmax(4vw, 4vw));
+    grid-template-rows: repeat(4, minmax(4vw, 4vw));
+}
+#bn1, #bn2, #bn3, #bn4, #bn5, #bn6, #bn7, #bn8, #bn9, #bn0, #bna, #bns, #bnm, #bnd, #bne, #bnc{
+    width: 4vw;
+    height: 4vw;
+    border-radius: 1vw;
+}
+#bne{
+    background-color:rgb(110, 148, 181);
+    color: white;
+}
