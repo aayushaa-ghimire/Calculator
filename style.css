@@ -1,42 +1,89 @@
-body{
-    display: flex;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.521);
+:root {
+  --bg-color: #e3eaf2;
+  --calc-bg: #ffffff;
+  --display-bg: #2d3e50;
+  --text-color: #333;
+  --accent-color: #4a90e2;
+  --btn-bg: #f8f9fa;
+  --btn-hover: #e9ecef;
 }
-#calcbody{
-    width: 17.5vw;
-    padding: 1vw;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5vw;
-    background-color: white;
-    border-radius: 0.5vw;
-    margin-top: 10vw;
-    margin-bottom: 10vw;
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  margin: 0;
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
-#para{
-    display: flex;
-    justify-content: end;
-    color: white;
+
+#calcbody {
+  width: 320px;
+  padding: 20px;
+  background-color: var(--calc-bg);
+  border-radius: 24px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
-#topcalc{
-    background-color: rgb(110, 148, 181);
-    width: 17.5vw;
-    height: 6vw;
-    border-radius:inherit;
+
+#topcalc {
+  background-color: var(--display-bg);
+  height: 80px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 20px;
+  color: white;
+  font-size: 2rem;
+  font-weight: 500;
 }
-#bottomcalc{
-    display: grid;
-    gap: 0.5vw;
-    grid-template-columns: repeat(4, minmax(4vw, 4vw));
-    grid-template-rows: repeat(4, minmax(4vw, 4vw));
+
+#bottomcalc {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
 }
-#bn1, #bn2, #bn3, #bn4, #bn5, #bn6, #bn7, #bn8, #bn9, #bn0, #bna, #bns, #bnm, #bnd, #bne, #bnc{
-    width: 4vw;
-    height: 4vw;
-    border-radius: 1vw;
+
+/* Base button styling */
+button {
+  aspect-ratio: 1 / 1;
+  border: none;
+  border-radius: 12px;
+  background-color: var(--btn-bg);
+  color: var(--text-color);
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.1s;
 }
-#bne{
-    background-color:rgb(110, 148, 181);
-    color: white;
+
+button:hover {
+  background-color: var(--btn-hover);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+#bnc {
+  color: #e74c3c;
+}
+
+#bne {
+  grid-column: span 4; /* Spans all 4 columns */
+  aspect-ratio: auto;
+  height: 60px;
+  background-color: var(--accent-color);
+  color: white;
+}
+
+#bne:hover {
+  background-color: #357abd;
 }
